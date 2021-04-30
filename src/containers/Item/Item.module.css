@@ -1,0 +1,23 @@
+.Item{
+    position: relative;
+    font-family: 'Roboto';
+    font-size: 20px;
+    line-height: 2;
+    color: #ffffff;
+}
+
+.Striked{
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.Checkbox{
+
+}
+
+.TrashIcon{
+    color: #706c61;
+    position: absolute;
+    right: 0;
+    margin-right:10px
+}

@@ -1,0 +1,27 @@
+.LeftQuote{
+    font-family: 'Valorant';
+    color: crimson;
+    font-size: 8rem;
+    position: absolute;
+    left: 10px;
+
+    margin:20vh auto;
+}
+
+.RightQuote{
+    font-family: 'Valorant';
+    color: crimson;
+    font-size: 8rem;
+    position: absolute;
+    right: 20px;
+    margin:20vh auto;
+    text-align: right;
+}
+
+
+  @font-face {
+    font-family: "Valorant";
+    src: local("Valorant"),
+      url("../../Fonts/Valorant.ttf") format("truetype");
+    font-weight: normal;
+  }

@@ -1,0 +1,12 @@
+.ItemList{
+    height: 40vh;
+    overflow: auto;
+    margin-right: -15px;
+}
+.Message{
+    margin: 30px auto;
+    font-family: 'Roboto';
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}

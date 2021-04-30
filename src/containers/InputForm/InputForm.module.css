@@ -1,0 +1,59 @@
+.InputForm {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-auto-columns: minmax(400px, auto);
+    flex-direction: row;
+    bottom: 0;
+    margin-bottom: 30px;
+}n
+
+.AddIcon{
+    font-size: 60px;
+    color: red;
+}
+
+.Input{
+    font-size: 20px;
+    background-color: #fff600;
+    padding: 15px;
+    margin: 10px auto;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    width: 135%;
+    
+}
+
+@keyframes reduceWidth {
+    0%   {width:135%;}
+    25%  {width:130%;}
+    50%  {width:125%;}
+    100% {width:120%;}
+}
+
+.InputAnimated{
+    animation: reduceWidth 0.3s both;
+}
+
+.AddButton{
+    display: inline;
+    text-align: right;
+    color: #c5ff3e;
+    z-index: 3;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.ButtonAnimated{
+    animation: displayButton 0.5s forwards;
+}
+
+@keyframes displayButton{
+    0%   {opacity: 0;}
+    25%  {opacity: 0.25;}
+    50%  {opacity: 0.5;}
+    100% {opacity:1;}
+}
+

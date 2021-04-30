@@ -1,0 +1,41 @@
+.Layout{
+    background-color: #798777;
+    width: 60vh;
+    padding: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border-radius: 55px;
+    border: 6px solid yellow;
+    background: #272343;
+    height: 550px;
+}
+
+body{
+    background-color: #c0fefc;
+}
+
+@media (max-width:450px){
+    .Layout {
+        width: 90%;
+    }    
+}
+
+@media (max-width:800px){
+    .Layout {
+        width: 70%;
+    }    
+}
+
+.Heading{
+    color: #c3d2d2;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Lato';
+    font-weight: 400;
+    line-height: 2;
+    border-radius: 10px;
+    border-bottom: 5px solid #8d1634;
+}

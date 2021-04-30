@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Checkbox } from '@material-ui/core';
+
+import classes from './Item.module.css';
 
 class Item extends Component {
     state = {
@@ -12,16 +15,21 @@ class Item extends Component {
     }
 
     render() {
-        return (
-            <li
-                className={this.state.complete ? 'striked' : 'unstriked'}  >
-                <span style={{ color: 'red', background: 'green' }}
-                    onClick={this.toggleState}>  X  </span>
-                {this.props.text}
-                <span style={{ color: 'blue', background: 'yellow' }}
-                    onClick={() => this.props.removeItem(this.props.id)}>  -   </span>
 
-            </li>
+
+
+        return (
+            <li className={classes.Item}>
+                {/* <span style={{ color: 'red', background: 'green' }}
+                    onClick={this.toggleState}>  X  </span> */}
+                <Checkbox checked={this.state.complete} onChange={this.toggleState} color='primary' />
+                <span className={this.state.complete ? classes.Striked : null} >{this.props.text}</span>
+                <span className={classes.TrashIcon}
+                    onClick={() => this.props.removeItem(this.props.id)}>
+                    <i class="fas fa-trash"></i>
+                </span>
+
+            </li >
         );
     }
 }

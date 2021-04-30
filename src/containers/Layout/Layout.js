@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import InputForm from '../InputForm/InputForm'
 import ItemList from '../../components/ItemList/ItemList'
+import Quote from '../../components/Quote/Quote'
+
+import classes from './Layout.module.css';
 
 class Layout extends Component {
     state = {
@@ -10,26 +13,29 @@ class Layout extends Component {
     itemAddHandler = (val) => {
         const updatedList = this.state.itemList.concat(val)
         this.setState({ itemList: updatedList });
-        console.log(updatedList);
     }
 
     itemDeleteHandler = (index) => {
         const updatedList = [...this.state.itemList]
         updatedList.splice(index, 1)
-        console.log(index);
-        console.log(updatedList);
         this.setState({ itemList: updatedList });
 
     }
 
     render() {
         return (
-            <div>
-                <div>
-                    <ItemList list={this.state.itemList} onItemRemove={this.itemDeleteHandler} />
+            <React.Fragment>
+                <Quote left />
+                <div className={classes.Layout}>
+
+                    <div className={classes.Heading}>TODO LIST</div>
+                    <div>
+                        <ItemList list={this.state.itemList} onItemRemove={this.itemDeleteHandler} />
+                    </div>
+                    <InputForm itemAdded={this.itemAddHandler} />
                 </div>
-                <InputForm itemAdded={this.itemAddHandler} />
-            </div>
+                <Quote right />
+            </React.Fragment>
         );
     }
 }
